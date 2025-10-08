@@ -4,7 +4,6 @@ Date: 09/23/25
 
 "Tactics without strategy is the noise before defeat"
 - Sun Tzu, ~5th Century BCE
-
 */
 
 #include <gtest/gtest.h>
@@ -13,7 +12,20 @@ Date: 09/23/25
 #include <set>
 using namespace std; 
 
-
+/*1.    Following the logic of the moveTower function, write a recursive function
+        `countHanoiMoves(n)` that computes the number of moves required to solve
+        the Towers of Hanoi puzzle for n disks. 
+                __  
+               | 
+               | 1  if n = 1
+        T(n) = |
+               | 2T(n - 1) + 1 otherwise
+               |__
+*/               
+int countHanoiMoves(int n){
+    if (n == 1) return 1; 
+    return 2 * countHanoiMoves(n - 1) + 1; 
+}
 
 set<string> generatePermutations(string str){
     set<string> result = {};
@@ -64,6 +76,12 @@ void moveSingleDisk(char start, char finish){
 TEST(subsetSumExists, Testing){
     set<int> s = {-2 ,1, 3, 8};
     EXPECT_TRUE(subsetSumExists(s, 7));
+}
+
+/*--- countHanoiMoves Testing ---*/
+TEST(countHanoiMoves, Testing){
+    int n = 7; 
+    EXPECT_EQ(countHanoiMoves(n), pow(2, n) - 1); 
 }
 
 

@@ -12,9 +12,49 @@ Date: 09/23/25
 #include <set>
 using namespace std; 
 
-/*1.    Following the logic of the moveTower function, write a recursive function
-        `countHanoiMoves(n)` that computes the number of moves required to solve
-        the Towers of Hanoi puzzle for n disks. 
+
+
+/*
+3.  Rewrite the Towers of Hanoi program so that it uses an explicit stack of
+    pending tasks instead of recursion. In this context, a task can be represented 
+    more easily as a structure containing the number of disks to move and the 
+    names of the spires used for the start, finish, and temporary repositories. At
+    the beginning of the process, you push onto your stack a single task that 
+
+
+*/
+/*
+2.  To make the operation of the program somewhat easier to explain, the
+    implementation of `moveTower` in this chapter uses
+
+            if (n == 1)
+
+    as its simple cast test. Whenever you see a recursive program use 1 as its
+    simple case, it pays to be a little skeptical; in most applications, 0 is 
+    a more appropriate choice. Rewrite the Towers of Hanoi program so that the 
+    `moveTower` function checks whether n is 0 instead. What happens to the 
+    legnth of the `moveTower` implementation?
+*/
+void moveSingleDisk2(char start, char finish);
+
+void moveTower2(int n, char start, char finish, char tmp){
+    if (n == 0){
+        moveSingleDisk2(start, finish);
+    } else {
+        moveTower2(n - 1, start, tmp, finish);
+        moveSingleDisk2(start, finish);
+        moveTower2(n - 1, tmp, finish, start);
+    }
+    
+}
+void moveSingleDisk2(char start, char finish){
+    cout << start << "-->" << finish << endl;
+}
+
+/*
+1.    Following the logic of the moveTower function, write a recursive function
+      `countHanoiMoves(n)` that computes the number of moves required to solve
+      the Towers of Hanoi puzzle for n disks. 
                 __  
                | 
                | 1  if n = 1
@@ -85,12 +125,16 @@ TEST(countHanoiMoves, Testing){
 }
 
 
+
+
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
-
+    cout << "--------- --moveTower--------------" << endl;
     moveTower(2, 'A', 'B', 'C');
-
-    for (string s: generatePermutations("ABCDE")){
+    cout << "------------moveTower2-------------" << endl;
+    moveTower2(2, 'A', 'B', 'C');
+    cout << "---------generatePermuations-------" << endl;
+    for (string s: generatePermutations("ABC")){
         cout << "  \"" << s << "\"" << endl;
     }
 

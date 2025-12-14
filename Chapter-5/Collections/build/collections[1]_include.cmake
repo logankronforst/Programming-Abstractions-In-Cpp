@@ -1,0 +1,5 @@
+if(EXISTS "/home/logan/Desktop/CS/Programming-Abstractions-In-Cpp/Chapter-5/Collections/build/collections[1]_tests.cmake")
+  include("/home/logan/Desktop/CS/Programming-Abstractions-In-Cpp/Chapter-5/Collections/build/collections[1]_tests.cmake")
+else()
+  add_test(collections_NOT_BUILT collections_NOT_BUILT)
+endif()

@@ -17,20 +17,51 @@ bezel.
 #include <iostream>
 #include <string>
 #include <vector>
+#include <array>
 using namespace std; 
 
 
+/*
+1.  In statistics, a collection of data values is often referred to as a distribution.
+    One of the primary goals of statistical analysis is to find ways to compress the 
+    complete set of data into summary statistics that express properties of the 
+    distribution as a whole. THe most common statistical measure is the mean, 
+    which simply is the traditional average. FOr the distribution x_1, x_2, x_3,...x_n,
+    the mean is usually represented by the symbol x_bar. 
 
-/*--- placeholder ---*/
-TEST(CollectionsChapter, PlaceholderTest){
-    vector<string> collections = {"sets", "maps", "queues"};
-    EXPECT_FALSE(collections.empty());
-    EXPECT_EQ(collections.front(), "sets");
+        Write a function 
+
+            double mean(Vector<double>& data);
+
+        that returns the mean of the vector. 
+
+
+*/
+double mean(vector<double>& data) {
+    int n = data.size();
+    double sum = 0;
+
+    for (int i = 0; i < n; i++){
+        sum+=data[i];
+    }
+
+    return sum / n;
+
+
+
+}
+
+
+/*----- Testing -----*/
+TEST(testMean, simpleTest){
+    vector<double> data = {10, 3, 2};
+    EXPECT_EQ(mean(data), 5);
 }
 
 
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
+
     
     return RUN_ALL_TESTS();
 }

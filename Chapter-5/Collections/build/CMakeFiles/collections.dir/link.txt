@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/collections.dir/src/main.cpp.o -o collections  lib/libgtest.a 

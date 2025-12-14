@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -isystem /home/logan/Programming-Abstractions-In-Cpp/Chapter-8/Recursive-Strategies/build/_deps/googletest-src/googletest/include -isystem /home/logan/Programming-Abstractions-In-Cpp/Chapter-8/Recursive-Strategies/build/_deps/googletest-src/googletest
 
-CXX_FLAGS = -std=c++17
+CXX_FLAGS = -g -std=c++17
 

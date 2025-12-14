@@ -56,6 +56,7 @@ CMakeFiles/recursive_strategies.dir/src/main.cpp.o: /home/logan/Programming-Abst
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/deque.tcc \
   /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
@@ -105,6 +106,7 @@ CMakeFiles/recursive_strategies.dir/src/main.cpp.o: /home/logan/Programming-Abst
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
@@ -117,6 +119,7 @@ CMakeFiles/recursive_strategies.dir/src/main.cpp.o: /home/logan/Programming-Abst
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
   /usr/include/c++/13/bits/stl_set.h \
+  /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
@@ -151,6 +154,7 @@ CMakeFiles/recursive_strategies.dir/src/main.cpp.o: /home/logan/Programming-Abst
   /usr/include/c++/13/cxxabi.h \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
@@ -182,6 +186,7 @@ CMakeFiles/recursive_strategies.dir/src/main.cpp.o: /home/logan/Programming-Abst
   /usr/include/c++/13/ratio \
   /usr/include/c++/13/set \
   /usr/include/c++/13/sstream \
+  /usr/include/c++/13/stack \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
   /usr/include/c++/13/streambuf \
@@ -520,6 +525,14 @@ CMakeFiles/recursive_strategies.dir/src/main.cpp.o: /home/logan/Programming-Abst
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
 
 /usr/include/c++/13/bits/stl_map.h:
@@ -533,8 +546,6 @@ CMakeFiles/recursive_strategies.dir/src/main.cpp.o: /home/logan/Programming-Abst
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/13/bits/functexcept.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/c++/13/bits/stl_bvector.h:
 
@@ -555,8 +566,6 @@ CMakeFiles/recursive_strategies.dir/src/main.cpp.o: /home/logan/Programming-Abst
 /usr/include/c++/13/bits/uses_allocator.h:
 
 /usr/include/c++/13/bits/erase_if.h:
-
-/usr/include/c++/13/bits/stringfwd.h:
 
 /usr/include/c++/13/bits/shared_ptr.h:
 
@@ -587,6 +596,12 @@ CMakeFiles/recursive_strategies.dir/src/main.cpp.o: /home/logan/Programming-Abst
 /usr/include/c++/13/bits/uses_allocator_args.h:
 
 /usr/include/c++/13/bits/memoryfwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/time.h:
 
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
 
@@ -629,6 +644,10 @@ _deps/googletest-src/googletest/include/gtest/gtest-param-test.h:
 /usr/include/c++/13/bits/locale_conv.h:
 
 /usr/include/c++/13/bits/istream.tcc:
+
+/usr/include/c++/13/bits/stl_stack.h:
+
+/usr/include/c++/13/bits/stringfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
@@ -722,6 +741,8 @@ _deps/googletest-src/googletest/include/gtest/gtest-message.h:
 
 /usr/include/c++/13/bits/string_view.tcc:
 
+/usr/include/c++/13/bits/stl_deque.h:
+
 _deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
@@ -788,6 +809,8 @@ _deps/googletest-src/googletest/include/gtest/gtest.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
+/usr/include/c++/13/stack:
+
 /usr/include/c++/13/bits/stl_relops.h:
 
 _deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h:
@@ -804,17 +827,15 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 /usr/include/c++/13/bits/alloc_traits.h:
 
+/usr/include/c++/13/bits/deque.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
 _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
 
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/c++/13/math.h:
-
-/usr/include/c++/13/bits/unique_lock.h:
-
-/usr/include/c++/13/mutex:
 
 /usr/include/c++/13/bits/allocated_ptr.h:
 
@@ -900,17 +921,17 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/include/c++/13/typeinfo:
 
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
 /usr/include/c++/13/bits/exception.h:
 
 /usr/include/c++/13/bits/memory_resource.h:
 
 /usr/include/c++/13/streambuf:
+
+/usr/include/c++/13/math.h:
+
+/usr/include/c++/13/bits/unique_lock.h:
+
+/usr/include/c++/13/mutex:
 
 /usr/include/c++/13/optional:
 
@@ -929,6 +950,8 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 /usr/include/c++/13/cmath:
 
 /usr/include/c++/13/ctime:
+
+/usr/include/c++/13/deque:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -980,10 +1003,6 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/c++/13/istream:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
 /usr/include/c++/13/bits/ios_base.h:
 
 /usr/include/c++/13/iterator:
@@ -1005,6 +1024,12 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/13/string:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/c++/13/map:
+
+/usr/include/c++/13/string_view:
 
 /usr/include/features-time64.h:
 
@@ -1094,18 +1119,8 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
 /usr/include/c++/13/bits/requires_hosted.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/c++/13/map:
-
-/usr/include/c++/13/string_view:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:

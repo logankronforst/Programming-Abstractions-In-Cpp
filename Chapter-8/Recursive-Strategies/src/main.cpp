@@ -9,8 +9,15 @@ Date: 09/23/25
 #include <gtest/gtest.h>
 #include <iostream>
 #include <math.h>
+#include <stack>
+#include <map>
 #include <set>
 using namespace std; 
+
+
+
+
+
 
 
 
@@ -20,9 +27,31 @@ using namespace std;
     more easily as a structure containing the number of disks to move and the 
     names of the spires used for the start, finish, and temporary repositories. At
     the beginning of the process, you push onto your stack a single task that 
-
-
 */
+
+void moveSingleDisk(char start, char finish);
+
+void iterativeHanoi(int n, char start, char finish, char tmp){
+    stack<map<int, vector<char>>> s; 
+    map<int, vector<char>> task;
+
+    while (n > 1){
+        if (!s.empty()){
+            s.pop();
+        }
+        task = {{n - 1, {start, tmp, finish}}};
+        s.push(task);
+        moveSingleDisk(start, finish);
+        s.pop();
+        task = {{n-1, {tmp, finish, start}}};
+        s.push(task);
+    }
+    moveSingleDisk(start, finish);
+}
+
+
+
+
 /*
 2.  To make the operation of the program somewhat easier to explain, the
     implementation of `moveTower` in this chapter uses
@@ -33,22 +62,18 @@ using namespace std;
     simple case, it pays to be a little skeptical; in most applications, 0 is 
     a more appropriate choice. Rewrite the Towers of Hanoi program so that the 
     `moveTower` function checks whether n is 0 instead. What happens to the 
-    legnth of the `moveTower` implementation?
+    length of the `moveTower` implementation?
 */
-void moveSingleDisk2(char start, char finish);
+void moveSingleDisk(char start, char finish);
 
 void moveTower2(int n, char start, char finish, char tmp){
     if (n == 0){
-        moveSingleDisk2(start, finish);
+        moveSingleDisk(start, finish);
     } else {
         moveTower2(n - 1, start, tmp, finish);
-        moveSingleDisk2(start, finish);
+        moveSingleDisk(start, finish);
         moveTower2(n - 1, tmp, finish, start);
     }
-    
-}
-void moveSingleDisk2(char start, char finish){
-    cout << start << "-->" << finish << endl;
 }
 
 /*
@@ -130,9 +155,11 @@ TEST(countHanoiMoves, Testing){
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     cout << "--------- --moveTower--------------" << endl;
-    moveTower(2, 'A', 'B', 'C');
+    moveTower(3, 'A', 'B', 'C');
     cout << "------------moveTower2-------------" << endl;
     moveTower2(2, 'A', 'B', 'C');
+    cout << "-----------iterativeHanoi-----------" << endl;
+    iterativeHanoi(3, 'A', 'B', 'C');
     cout << "---------generatePermuations-------" << endl;
     for (string s: generatePermutations("ABC")){
         cout << "  \"" << s << "\"" << endl;

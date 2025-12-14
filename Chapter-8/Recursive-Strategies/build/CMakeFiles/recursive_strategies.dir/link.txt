@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/recursive_strategies.dir/src/main.cpp.o -o recursive_strategies  lib/libgtest.a 
+/usr/bin/c++ -g CMakeFiles/recursive_strategies.dir/src/main.cpp.o -o recursive_strategies  lib/libgtest.a 

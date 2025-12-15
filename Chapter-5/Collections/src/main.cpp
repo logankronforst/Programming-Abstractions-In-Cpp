@@ -18,6 +18,7 @@ bezel.
 #include <string>
 #include <vector>
 #include <array>
+#include <chrono>
 using namespace std; 
 
 
@@ -37,31 +38,36 @@ using namespace std;
 
 
 */
-double mean(vector<double>& data) {
+long mean(vector<long>& data) {
     int n = data.size();
     double sum = 0;
 
     for (int i = 0; i < n; i++){
         sum+=data[i];
     }
-
     return sum / n;
-
-
-
 }
 
 
 /*----- Testing -----*/
 TEST(testMean, simpleTest){
-    vector<double> data = {10, 3, 2};
+    vector<long> data = {10, 3, 2};
     EXPECT_EQ(mean(data), 5);
 }
 
 
+
+
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
-
     
+    vector<long> data{11,2000000000,3,4,10000000,1000000000000,2000000000000};
+    auto start(chrono::steady_clock::now());
+    const auto m = mean(data);
+    auto finish(chrono::steady_clock::now());
+    const chrono::duration<double> elapsed_seconds = {finish - start};
+    cout << elapsed_seconds << '\n';
+    
+        
     return RUN_ALL_TESTS();
 }

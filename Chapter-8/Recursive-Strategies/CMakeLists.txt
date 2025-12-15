@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 project(recursive_strategies LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -32,4 +32,3 @@ target_link_libraries(${PROJECT_NAME}
 include(CTest)
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME})
-

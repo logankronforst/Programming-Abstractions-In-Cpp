@@ -1,5 +1,0 @@
-if(EXISTS "/home/logan/Programming-Abstractions-In-Cpp/Chapter-8/Recursive-Strategies/build/recursive_strategies[1]_tests.cmake")
-  include("/home/logan/Programming-Abstractions-In-Cpp/Chapter-8/Recursive-Strategies/build/recursive_strategies[1]_tests.cmake")
-else()
-  add_test(recursive_strategies_NOT_BUILT recursive_strategies_NOT_BUILT)
-endif()

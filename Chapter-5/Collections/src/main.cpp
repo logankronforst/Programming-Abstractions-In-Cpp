@@ -19,24 +19,42 @@ bezel.
 #include <vector>
 #include <array>
 #include <chrono>
+#include <cmath>
 using namespace std; 
 
 
+
 /*
-1.  In statistics, a collection of data values is often referred to as a distribution.
-    One of the primary goals of statistical analysis is to find ways to compress the 
-    complete set of data into summary statistics that express properties of the 
-    distribution as a whole. THe most common statistical measure is the mean, 
-    which simply is the traditional average. FOr the distribution x_1, x_2, x_3,...x_n,
-    the mean is usually represented by the symbol x_bar. 
+2.  Write a function
 
-        Write a function 
+        double stddev(vector<double>& data);
 
-            double mean(Vector<double>& data);
+    that returns the standard deviation of the data distribution
 
-        that returns the mean of the vector. 
+*/
+long stddev(vector<long>& data) {
+    long avg = mean(data);
+    long sum = 0;
+
+    for (int i = 0; i < data.size(); i++) {
+        sum += powl(avg - data[i], 2);
+    }
+    return sqrt(sum / data.size());
+}
 
 
+
+
+
+
+
+/*
+1.  
+    Write a function 
+
+        double mean(Vector<double>& data);
+
+    that returns the mean of the vector. 
 */
 long mean(vector<long>& data) {
     int n = data.size();

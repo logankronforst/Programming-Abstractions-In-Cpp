@@ -114,8 +114,8 @@ bool subsetSumExists(set<int>& s, int target){
     auto firstIter = s.begin();
     int element = *firstIter; 
     
-    set<int> rest = s;
-    rest.erase(rest.begin());
+    set<int> rest = s; 
+    rest.erase(rest.begin()); 
 
     return subsetSumExists(rest, target)
         || subsetSumExists(rest, target - element); 

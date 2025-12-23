@@ -17,10 +17,53 @@ bezel.
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 #include <array>
 #include <chrono>
 #include <cmath>
 using namespace std; 
+
+/*
+        Stream class inheritance tree 
+
+                       ios
+                    ---------
+                     clear()   
+                     fail()
+                     eof()
+                    ---------
+                   /
+                  /   
+                 /   
+             istream
+           -----------
+              get()    
+             unget() 
+               >>
+           -----------
+           /
+          /
+         /
+     ifstream
+    ----------
+    open(cstr)
+     close()
+    ---------- 
+
+A successing class can use all methods of a preceeding class but not vise versa.
+For example ifstream has access to all of its functions, plus istream, and ios. But 
+istream doesn't inherit functions from iftream. 
+
+*/
+void readVector(istream& is, vector<double>& vec) {
+     while (true) {
+        double ch = is.get();
+        if (ch == EOF) break;
+        vec.push_back(ch);
+     }
+    
+}
+
 
 
 
@@ -41,11 +84,6 @@ long stddev(vector<long>& data) {
     }
     return sqrt(sum / data.size());
 }
-
-
-
-
-
 
 
 /*
@@ -85,6 +123,11 @@ int main(int argc, char** argv) {
     auto finish(chrono::steady_clock::now());
     const chrono::duration<double> elapsed_seconds = {finish - start};
     cout << elapsed_seconds << '\n';
+
+    // readVector 
+    ifstream infile; 
+    vector<double> v = {};
+    readVector(infile, v);
     
         
     return RUN_ALL_TESTS();

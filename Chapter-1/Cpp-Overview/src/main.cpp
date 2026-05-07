@@ -45,7 +45,7 @@ int sum_numbers(int num) {
     }
     return result; 
 }
-/*          __
+/*         __
            |
 n          |    1              if n <= 1
 sum(n) =   |

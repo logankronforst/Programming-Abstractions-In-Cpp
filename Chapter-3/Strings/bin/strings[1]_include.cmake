@@ -1,0 +1,5 @@
+if(EXISTS "/home/logan/Desktop/CS/Programming-Abstractions-In-Cpp/Chapter-3/Strings/bin/strings[1]_tests.cmake")
+  include("/home/logan/Desktop/CS/Programming-Abstractions-In-Cpp/Chapter-3/Strings/bin/strings[1]_tests.cmake")
+else()
+  add_test(strings_NOT_BUILT strings_NOT_BUILT)
+endif()

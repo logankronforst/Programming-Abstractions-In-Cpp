@@ -219,7 +219,7 @@ int fib(int n){
     Use Euclid's insight to write a recursive function `gcd(x, y)` that computes 
     the greatest common divisor of x and y.
 */
-long gcd(long x, long y){
+long long gcd(long long x, long long y){
     if (x % y == 0) return y; 
     return gcd(y, x % y);
 }
@@ -349,8 +349,8 @@ TEST(gcd, smallInputs){
 
 TEST(gcd, largeInputs){
     EXPECT_EQ(gcd(50, 422), 2);
-    EXPECT_EQ(gcd(9876543210, 1234567890), 90);
-    EXPECT_EQ(gcd(pow(2, 40), pow(2,35)), pow(2, 35)); 
+    EXPECT_EQ(gcd(9876543210LL, 1234567890LL), 90);
+    EXPECT_EQ(gcd(1LL << 40, 1LL << 35), 1LL << 35);
 }
 
 /*--- digitSum Testing ---*/

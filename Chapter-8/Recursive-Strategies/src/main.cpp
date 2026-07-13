@@ -154,16 +154,5 @@ TEST(countHanoiMoves, Testing){
 
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
-    cout << "--------- --moveTower--------------" << endl;
-    moveTower(3, 'A', 'B', 'C');
-    cout << "------------moveTower2-------------" << endl;
-    moveTower2(2, 'A', 'B', 'C');
-    cout << "-----------iterativeHanoi-----------" << endl;
-    iterativeHanoi(3, 'A', 'B', 'C');
-    cout << "---------generatePermuations-------" << endl;
-    for (string s: generatePermutations("ABC")){
-        cout << "  \"" << s << "\"" << endl;
-    }
-
     return RUN_ALL_TESTS();
 }
